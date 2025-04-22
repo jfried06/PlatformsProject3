@@ -1,5 +1,8 @@
 import './App.css';
+<<<<<<< Updated upstream
 import { useState, useEffect } from "react";
+=======
+>>>>>>> Stashed changes
 
 function App() {
 
@@ -21,15 +24,22 @@ function App() {
 
   return (
     <div>
+<<<<<<< Updated upstream
       <RandomButton onClick={handlePictureClick} />
       <img src={imageURL} alt="spaceImage" />
+=======
+      <header className="app-header">
+        NASA Picture of the Day
+      </header>
+      <RandomButton handleClick={handlePictureClick} />
+>>>>>>> Stashed changes
     </div>
   );
 }
 
 function RandomButton({ handleClick }) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div className="space-button">
       <button onClick={handleClick}>
         Get Random Picture
       </button>
