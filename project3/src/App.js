@@ -26,14 +26,14 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="app-container">
       <header className="app-header">
         NASA Picture of the Day
       </header>
       <RandomButton onClick={handlePictureClick} />
       <h1>{title}</h1>
       <h2>{date}</h2>
-      <img src={imageURL} alt="spaceImage" />
+      <img className="space-image" src={imageURL} alt="spaceImage" />
       <p>{explanation}</p>
     </div>
   );
