@@ -34,7 +34,7 @@ function App() {
       <h1>{title}</h1>
       <h2>{date}</h2>
       <img className="space-image" src={imageURL} alt="spaceImage" />
-      <p>{explanation}</p>
+      <p className="explanation">{explanation}</p>
     </div>
   );
 }
