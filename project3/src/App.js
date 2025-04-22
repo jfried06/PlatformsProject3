@@ -88,7 +88,7 @@ return (
       <RandomButton onClick={handlePictureClick} />
       <TodayButton onClick={handleTodayClick} />
       <img className="space-image" src={imageURL} alt="spaceImage" />
-      <p>{explanation}</p>
+      <p className="explanation">{explanation}</p>
     </div>
   );
 }
