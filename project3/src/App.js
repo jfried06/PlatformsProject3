@@ -11,10 +11,21 @@ function App() {
   function handlePictureClick() {
     // API KEY: jVPtZqCOqGMYnklNnjIUnygvyObM2G9ymzmKh303
     // use API to get new picture
+    const randomDate = () => {
+      const start = new Date(1995, 5, 16); 
+      const end = new Date();
+      const randomTime = start.getTime() + Math.random() * (end.getTime() - start.getTime());
+      const date = new Date(randomTime);
+      return date.toISOString().split('T')[0]; 
+    };
+    return randomDate();
+
+    
   }
 
   useEffect(() => {
-    fetch('https://api.nasa.gov/planetary/apod?api_key=jVPtZqCOqGMYnklNnjIUnygvyObM2G9ymzmKh303')
+    const date = handlePictureClick();
+    fetch(`https://api.nasa.gov/planetary/apod?api_key=jVPtZqCOqGMYnklNnjIUnygvyObM2G9ymzmKh303&date=${date}`)
       .then(response => response.json())
       .then(data => {
         setTitle(data.title);
