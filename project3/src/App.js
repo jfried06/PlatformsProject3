@@ -37,14 +37,14 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className="app-container">
       <header className="app-header">
-        NASA Picture of the Day
+        NASA Picture of the Day for {date}
       </header>
-      <RandomButton onClick={handlePictureClick} />
       <h1>{title}</h1>
-      <h2>{date}</h2>
-      <img src={imageURL} alt="spaceImage" />
+      <RandomButton onClick={handlePictureClick} />
+      <TodayButton onClick={handlePictureClick} />
+      <img className="space-image" src={imageURL} alt="spaceImage" />
       <p>{explanation}</p>
     </div>
   );
@@ -55,6 +55,16 @@ function RandomButton({ handleClick }) {
     <div className="space-button">
       <button onClick={handleClick}>
         Get Random Picture
+      </button>
+    </div>
+  );
+}
+
+function TodayButton({ handleClick }) {
+  return (
+    <div className="space-button">
+      <button onClick={handleClick}>
+        Get Today's Picture
       </button>
     </div>
   );
