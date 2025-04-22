@@ -27,6 +27,9 @@ function App() {
 
   return (
     <div>
+      <header className="app-header">
+        NASA Picture of the Day
+      </header>
       <RandomButton onClick={handlePictureClick} />
       <h1>{title}</h1>
       <h2>{date}</h2>
@@ -38,7 +41,7 @@ function App() {
 
 function RandomButton({ handleClick }) {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+    <div className="space-button">
       <button onClick={handleClick}>
         Get Random Picture
       </button>
