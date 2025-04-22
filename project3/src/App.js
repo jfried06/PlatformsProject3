@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from "react";
 
@@ -30,7 +29,7 @@ function App() {
 
 function RandomButton({ handleClick }) {
   return (
-    <div>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <button onClick={handleClick}>
         Get Random Picture
       </button>
